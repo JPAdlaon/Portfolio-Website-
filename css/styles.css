@@ -231,6 +231,7 @@ span {
     margin: 1rem 0 3rem;
 }
 
+/*----Portfolio Section Start----*/
 .portfolio {
     background: var(--second-bg-color);
 }
@@ -241,7 +242,7 @@ span {
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /*change this code to grid-template-columns: repeat(3, 1fr); vwhen 3 column*/
     align-items: center;
     gap: 2.5rem;
 }
@@ -307,7 +308,9 @@ span {
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+/*----Portfolio Section End----*/
 
+/*----Contact Section Start----*/
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -348,6 +351,7 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
+/*----Contact Section End----*/
 
 .footer {
     display: flex;

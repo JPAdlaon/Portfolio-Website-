@@ -51,7 +51,7 @@ window.onscroll = () => {
     /*==================== typed js ====================*/
 
     const typed = new Typed('.multiple-text', {
-        strings: ['Fullstack Web Developer!','AutoCAD Drafter!', 'Virtual Assistant!'],
+        strings: ['Fullstack Web Developer!','AutoCAD Drafter!'/*, 'Virtual Assistant!'*/],
         typeSpeed: 100,
         backSpeed: 100,
         backDeay: 1000,
