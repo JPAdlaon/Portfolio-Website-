@@ -57,3 +57,28 @@ window.onscroll = () => {
         backDeay: 1000,
         loop: true
     });
+
+
+    /*==================== contact mail ====================*/
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactForm = document.getElementById('contactForm');
+      
+        contactForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+      
+          const fullName = document.getElementById('fullName').value;
+          const emailAddress = document.getElementById('emailAddress').value;
+          const mobileNumber = document.getElementById('mobileNumber').value;
+          const emailSubject = document.getElementById('emailSubject').value;
+          const message = document.getElementById('message').value;
+      
+          const subject = encodeURIComponent(emailSubject);
+          const body = encodeURIComponent(
+            `Full Name: ${fullName}%0AEmail Address: ${emailAddress}%0AMobile Number: ${mobileNumber}%0AMessage: ${message}`
+          );
+      
+          window.location.href = `mailto:adlaon.johnpaul@gmail.com?subject=${subject}&body=${body}`;
+        });
+      });
+      
