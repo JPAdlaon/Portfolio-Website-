@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Personal Portfolio Website Design | JP Adlaon</title>
+    <title>JP Adlaon Portfolio Website</title>
     <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--custom css-->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- EmailJs -->
+
+    <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("OJ9p5_M-7lbjBWaBd");
+        })();
+    </script> -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+        emailjs.init("OJ9p5_M-7lbjBWaBd");
+        })();
+    </script>
+
 </head>
 <body>
     
@@ -30,9 +48,9 @@
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
-            <h1>JP Adlaon</h1>
+            <h1>John Paul Adlaon</h1>
             <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora magni laboriosam alias expedita officiis aperiam accusamus deleniti aut voluptas molestias?</p>
+            <p> A detail-oriented Draftsman turned Full Stack Web Developer. My journey reflects adaptability, teamwork, and a love for problem-solving. Familiar with HTML, CSS, JavaScript, ReactJS, NodeJS, PHP, Laravel, and MySQL. Eager to contribute my growing skills to create remarkable digital experiences. </p>
             <div class="social-media">
                 <a href="#"><i class='bx bxl-facebook' ></i></a>
                 <a href="#"><i class='bx bxl-twitter' ></i></a>
@@ -176,22 +194,41 @@
 </section>
 
     <!-- Contact Section design -->
+    <!-- <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+
+        <form action="">
+            <div class="input-box">
+                <input type="text" id="fullName" placeholder="Full Name">
+                <input type="email" id="email_id" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="number" id="mbile_number" placeholder="Mobile Number">
+                <input type="text" id="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn" onclick="SendMail()">
+        </form>
+    </section> -->
+
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
-      
         <form id="contactForm">
           <div class="input-box">
             <input type="text" id="fullName" placeholder="Full Name">
-            <input type="email" id="emailAddress" placeholder="Email Address">
+            <input type="email" id="email_id" placeholder="Email Address">
           </div>
           <div class="input-box">
-            <input type="number" id="mobileNumber" placeholder="Mobile Number">
-            <input type="text" id="emailSubject" placeholder="Email Subject">
+            <input type="number" id="mobile_number" placeholder="Mobile Number">
+            <input type="text" id="subject" placeholder="Email Subject">
           </div>
           <textarea id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
           <input type="submit" value="Send Message" class="btn">
         </form>
       </section>
+      
+      
+
     <!-- Footer Design -->
     <footer class=" ">
         <div class="footer-text">
@@ -204,7 +241,7 @@
     </footer>
 
     <!-- Contact Mail to Email -->
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
           const contactForm = document.getElementById('contactForm');
       
@@ -225,7 +262,7 @@
             window.location.href = `mailto:adlaon.johnpaul@gmail.com?subject=${subject}&body=${body}`;
           });
         });
-      </script>
+      </script> -->
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

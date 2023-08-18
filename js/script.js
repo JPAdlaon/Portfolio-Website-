@@ -60,7 +60,43 @@ window.onscroll = () => {
 
 
     /*==================== contact mail ====================*/
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const contactForm = document.getElementById('contactForm');
+      
+    //     contactForm.addEventListener('submit', function (event) {
+    //       event.preventDefault();
+      
+    //       const fullName = document.getElementById('fullName').value;
+    //       const emailAddress = document.getElementById('emailAddress').value;
+    //       const mobileNumber = document.getElementById('mobileNumber').value;
+    //       const emailSubject = document.getElementById('emailSubject').value;
+    //       const message = document.getElementById('message').value;
+      
+    //       const subject = encodeURIComponent(emailSubject);
+    //       const body = encodeURIComponent(
+    //         `Full Name: ${fullName}%0AEmail Address: ${emailAddress}%0AMobile Number: ${mobileNumber}%0AMessage: ${message}`
+    //       );
+      
+    //       window.location.href = `mailto:adlaon.johnpaul@gmail.com?subject=${subject}&body=${body}`;
+    //     });
+    //   });
+      
+
+    /*==================== EmailJs ====================*/
     
+    // function SendMail() {
+    //     var params = {
+    //         from_name : document.getElementById("fullName").value,
+    //         email_id : document.getElementById("email_id").value,
+    //         mobile_number : document.getElementById("mobile_number").value,
+    //         subject : document.getElementById("subject").value,
+    //         message : document.getElementById("message").value,
+    //     }
+    //     emailjs.send("service_6uw9ax9", "template_qal9849", params).then(function(res) {
+    //         alert("Success " + res.status);
+    //     })
+    // }
     document.addEventListener('DOMContentLoaded', function () {
         const contactForm = document.getElementById('contactForm');
       
@@ -68,17 +104,27 @@ window.onscroll = () => {
           event.preventDefault();
       
           const fullName = document.getElementById('fullName').value;
-          const emailAddress = document.getElementById('emailAddress').value;
-          const mobileNumber = document.getElementById('mobileNumber').value;
-          const emailSubject = document.getElementById('emailSubject').value;
+          const emailId = document.getElementById('email_id').value;
+          const mobileNumber = document.getElementById('mobile_number').value;
+          const subject = document.getElementById('subject').value;
           const message = document.getElementById('message').value;
       
-          const subject = encodeURIComponent(emailSubject);
-          const body = encodeURIComponent(
-            `Full Name: ${fullName}%0AEmail Address: ${emailAddress}%0AMobile Number: ${mobileNumber}%0AMessage: ${message}`
-          );
+          // Prepare the parameters for EmailJS
+          const emailParams = {
+            from_name: fullName,
+            email_id: emailId,
+            mobile_number: mobileNumber,
+            subject: subject,
+            message: message,
+          };
       
-          window.location.href = `mailto:adlaon.johnpaul@gmail.com?subject=${subject}&body=${body}`;
+          // Send email using EmailJS
+          emailjs.send("service_6uw9ax9", "template_qal9849", emailParams)
+            .then(function (response) {
+              alert("Message Submitted!");
+            }, function (error) {
+              alert("An error occurred. Please try again later.");
+            });
         });
       });
       
