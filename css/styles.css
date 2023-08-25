@@ -231,6 +231,7 @@ span {
     margin: 1rem 0 3rem;
 }
 
+
 /*----Portfolio Section Start----*/
 .portfolio {
     background: var(--second-bg-color);
@@ -292,6 +293,14 @@ span {
 .portfolio-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
+}
+
+.portfolio-layer h3 {
+    font-size: 2rem;
+}
+
+.portfolio-TechStacks{
+    display: inline-block;
 }
 
 .portfolio-layer a {
